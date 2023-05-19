@@ -71,7 +71,7 @@ public class Driver {
                     desiredCapabilities2.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
                     desiredCapabilities2.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
                     desiredCapabilities2.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3");
-                    desiredCapabilities2.setCapability(MobileCapabilityType.APP, "/Users/oscar/IdeaProjects/EU10_AppiumAutomation/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
+                    desiredCapabilities2.setCapability(MobileCapabilityType.APP, "C:\\Users\\hhm\\IdeaProjects\\EU10_AppiumAutomation\\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
                     // for most of the applications, you need to tell Appium, app package (location, in mobile phone), app Activity for it
                     desiredCapabilities2.setCapability("appPackage","com.swaglabsmobileapp");
                     desiredCapabilities2.setCapability("appActivity","com.swaglabsmobileapp.SplashActivity");
@@ -97,7 +97,7 @@ public class Driver {
                    // desiredCapabilities3.setCapability("appPackage","com.swaglabsmobileapp");
                    // desiredCapabilities3.setCapability("appActivity","com.swaglabsmobileapp.SplashActivity");
                     try {
-                        url = new URL("PUT YOUR HUB INFO");
+                        url = new URL("https://oauth-mecav3-6e075:2d34aa43-f326-4934-b2dd-c738789c56bf@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     }

@@ -11,18 +11,20 @@ import org.junit.jupiter.api.Test;
 public class SwagLabTest {
 
     @Test
-    public void Test(){
+    public void Test() throws InterruptedException {
         AppiumDriver<MobileElement> driver = Driver.getDriver();
 
         System.out.println(driver.getDeviceTime());
 
         Assertions.assertEquals("android",driver.getPlatformName());
-        driver.findElement(MobileBy.AccessibilityId("test-Username")).sendKeys("standard_user");
+
+         driver.findElement(MobileBy.AccessibilityId("test-Username"))   .sendKeys("standard_user");
+
         driver.findElement(MobileBy.AccessibilityId("test-Password")).sendKeys("secret_sauce");
         driver.findElement(MobileBy.AccessibilityId("test-LOGIN")).click();
 
         // to scroll down we are using a method like in Selenium we had JSE
-        ((AndroidDriver)driver).findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Policy\"));");
+        ((AndroidDriver)driver).findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"in\"));");
 
        driver.closeApp();
     }
